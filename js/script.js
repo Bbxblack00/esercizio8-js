@@ -1,3 +1,19 @@
+
+var lis = document.getElementsByTagName('li');
+for (var i = 0; i < lis.length; i++) {
+
+  var li = lis[i];
+
+  li.addEventListener('click', function() {
+    var clickedLi = this;
+    var clickedLichildrens = this.children;
+    var clickedCheckbox = clickedLichildrens[1];
+
+    clickedCheckbox.checked = !clickedCheckbox.checked;
+  });
+}
+
+
 var priceBtn = document.getElementById('calculate');
 priceBtn.addEventListener('click', function() {
 
